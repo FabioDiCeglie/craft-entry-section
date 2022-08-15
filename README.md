@@ -26,8 +26,4 @@ To install the plugin, follow these instructions.
 
 The EntryInterface will support `sectionName` as parameter in the GraphQL 
 
-## Craft Entry Section Roadmap
-
-* Release it
-
 Brought to you by [Perfectwebteam](https://perfectwebteam.nl/)
