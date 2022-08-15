@@ -11,11 +11,10 @@
 namespace perfectwebteam\craftentrysection;
 
 
-use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
-
+use craft\events\DefineGqlTypeFieldsEvent;
+use craft\gql\TypeManager;
+use GraphQL\Type\Definition\Type;
 use yii\base\Event;
 
 /**
@@ -57,21 +56,19 @@ class CraftEntrySection extends Plugin
         self::$plugin = $this;
 
         Event::on(
-            Plugins::class,
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
+            TypeManager::class,
+            TypeManager::EVENT_DEFINE_GQL_TYPE_FIELDS,
+            static function(DefineGqlTypeFieldsEvent $event) {
+                if ($event->typeName == 'EntryInterface') {
+                    $event->fields['sectionName'] = [
+                        'name' => 'sectionName',
+                        'type' => Type::string(),
+                        'resolve' => function($source, $arguments, $context, $resolveInfo) {
+                            return $source->sectionHandle;
+                        }
+                    ];
                 }
             }
-        );
-
-        Craft::info(
-            Craft::t(
-                'craft-entry-section',
-                '{name} plugin loaded',
-                ['name' => $this->name]
-            ),
-            __METHOD__
         );
     }
 }
