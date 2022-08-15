@@ -1,8 +1,7 @@
 {
     "name": "perfectwebteam/craft-entry-section",
-    "description": "Include the name of the section an entry belongs to",
+    "description": "Allow to query the sectionName of an Entry from the GraphQL API",
     "type": "craft-plugin",
-    "version": "0.0.1",
     "keywords": [
         "craft",
         "cms",
@@ -13,6 +12,7 @@
     ],
     "support": {
         "docs": "https://github.com/perfectwebteam/craft-entry-section/blob/master/README.md",
+        "source": "https://github.com/perfectwebteam/craft-entry-section",
         "issues": "https://github.com/perfectwebteam/craft-entry-section/issues"
     },
     "license": "MIT",
