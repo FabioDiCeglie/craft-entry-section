@@ -1,6 +1,6 @@
 # Craft Entry Section plugin for Craft CMS 3.x
 
-Include the name of the section an entry belongs to
+Include the name of the section an entry belongs to in the GraphQL API
 
 ![Screenshot](resources/img/plugin-logo.png)
 
@@ -22,21 +22,11 @@ To install the plugin, follow these instructions.
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Craft Entry Section.
 
-## Craft Entry Section Overview
-
--Insert text here-
-
-## Configuring Craft Entry Section
-
--Insert text here-
-
 ## Using Craft Entry Section
 
--Insert text here-
+The EntryInterface will support `sectionName` as parameter in the GraphQL 
 
 ## Craft Entry Section Roadmap
-
-Some things to do, and ideas for potential features:
 
 * Release it
 
