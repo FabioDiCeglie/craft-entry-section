@@ -1,0 +1,42 @@
+{
+    "name": "perfectwebteam/craft-entry-section",
+    "description": "Include the name of the section an entry belongs to",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft graphql",
+        "craft entry section",
+    ],
+    "support": {
+        "docs": "https://github.com/perfectwebteam/craft-entry-section/blob/master/README.md",
+        "issues": "https://github.com/perfectwebteam/craft-entry-section/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Perfect Web Team",
+            "homepage": "https://perfectwebteam.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "perfectwebteam\\craftentrysection\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Entry Section",
+        "handle": "entry-section",
+        "developer": "Perfect Web Team",
+        "developerUrl": "https://perfectwebteam.com",
+        "documentationUrl": "https://github.com/perfectwebteam/craft-entry-section/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/perfectwebteam/craft-entry-section/master/CHANGELOG.md",
+        "class": "perfectwebteam\\craftentrysection\\CraftEntrySection"
+    }
+}
