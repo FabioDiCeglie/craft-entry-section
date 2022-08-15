@@ -35,17 +35,17 @@ class CraftEntrySection extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '0.0.1';
+    public string $schemaVersion = '0.0.1';
 
     /**
      * @var bool
      */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     /**
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     /**
      * @inheritdoc
@@ -64,7 +64,7 @@ class CraftEntrySection extends Plugin
                         'name' => 'sectionName',
                         'type' => Type::string(),
                         'resolve' => function($source, $arguments, $context, $resolveInfo) {
-                            return $source->sectionHandle;
+                            return $source->section->name;
                         }
                     ];
                 }
